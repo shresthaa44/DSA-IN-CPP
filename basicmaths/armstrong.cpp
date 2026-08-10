@@ -13,7 +13,7 @@ int main()
         n=n/10;
     }
     if(sum==original)
-    cout<<original<< " is an Armstrong number";
+    cout<<n<< " is an Armstrong number";
     else
     cout<<"not armstrong";
 
