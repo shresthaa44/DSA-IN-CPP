@@ -5,15 +5,17 @@ int main()
     int n;
     cin>>n;
     int sum=0, lastdig=0;
-    int original=n;
+    int count=0;
+    int orig=n;
     while(n!=0)
     {
         lastdig=n%10;
-        sum=sum+lastdig*lastdig*lastdig;
+        count++;
+        sum=sum+ pow(lastdig, count);
         n=n/10;
     }
-    if(sum==original)
-    cout<<n<< " is an Armstrong number";
+    if(sum==orig)
+    cout<<orig<< " is an Armstrong number";
     else
     cout<<"not armstrong";
 
