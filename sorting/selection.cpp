@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+void selection_sort(int arr[], int n)
+{
+for(int i=0; i<=n-2; i++)
+{
+    int minimum=i; //considering the starting index of every unsorted part to be the minimum element
+    for(int j=i; j<=n-1; j++)
+    {
+        if(arr[j]< arr[minimum])
+        {
+            minimum=j;
+            
+        }
+        swap(arr[minimum], arr[i]);
+    }
+}
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++)
+    {
+    cin>> arr[i];
+    }
+    selection_sort(arr, n);
+    for(int i=0; i<n; i++)
+    {
+        cout<< arr[i]<< " ";
+    }
+
+}
